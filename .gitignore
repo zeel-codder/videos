@@ -1,2 +1,3 @@
 __pycache__
 /videos_venv
+*.sqlite3
