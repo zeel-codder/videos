@@ -15,4 +15,9 @@ class VideoModel(models.Model):
     channel_title = models.CharField(max_length=255)
 
     def __str__(self):
+        """
+        str(timezone.localtime(self.publish_time)) this line is converting UTC time to local time string
+        Returns:
+            _string_: video id | time at video publish
+        """
         return self.video_id + " | " + str(timezone.localtime(self.publish_time))
