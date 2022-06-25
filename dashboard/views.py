@@ -8,8 +8,7 @@ from .cron import update_videos
 
 # Create your views here.
 def home(request):
-    update_videos()
-    return HttpResponse("Home")
+    return render(request, "dashboard/home.html")
 
 
 def video_list(request, page, per_page_items):
