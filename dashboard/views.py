@@ -3,9 +3,12 @@ from django.http.response import JsonResponse, HttpResponse
 from django.shortcuts import render
 from .models import VideoModel
 from django.core.paginator import Paginator
+from django.conf import settings
+from .cron import update_videos
 
 # Create your views here.
 def home(request):
+    update_videos()
     return HttpResponse("Home")
 
 

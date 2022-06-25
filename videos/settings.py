@@ -138,4 +138,8 @@ CRONJOBS = [
 
 # API
 
-YT_API_KEY = "AIzaSyBlJHGSi3y_xOH1p5wPaXY1VX3IbZjHBoM"
+YT_API_KEYS = [
+    "AIzaSyBlJHGSi3y_xOH1p5wPaXY1VX3IbZjHBoM",
+    "AIzaSyDrHb8KGXENtvavmcrhcyw2hqnU4OHbKmI",
+    "AIzaSyDDACmzDSt8xqbrEVgHM9DE8lkRpPYHLYk",
+]

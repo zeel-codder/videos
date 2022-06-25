@@ -21,3 +21,15 @@ class VideoModel(models.Model):
             _string_: video id | time at video publish
         """
         return self.video_id + " | " + str(timezone.localtime(self.publish_time))
+
+
+class KeyModel(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    type = models.CharField(
+        max_length=10,
+        choices=(
+            ("YT", "Yt_Key_Index"),
+            ("None", "none"),
+        ),
+    )
+    index = models.IntegerField(default=0)
