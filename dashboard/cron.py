@@ -38,7 +38,7 @@ def update_videos():
             count_videos += 1
         except Exception as e:
             # if found the same video then break
-            print(e)
+            print(e.messages)
             break
 
     print(f"Added {count_videos} videos at {datetime.datetime.now()}")

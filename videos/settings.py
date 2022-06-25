@@ -135,3 +135,7 @@ CRONJOBS = [
         ">> " + os.path.join(BASE_DIR, "log/job.log" + " 2>&1 "),
     )
 ]
+
+# API
+
+YT_API_KEY = "AIzaSyBlJHGSi3y_xOH1p5wPaXY1VX3IbZjHBoM"

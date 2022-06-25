@@ -1,5 +1,6 @@
 # API client library
 from googleapiclient.discovery import build
+from django.conf import settings
 
 
 def get_youtube_client():
@@ -10,7 +11,7 @@ def get_youtube_client():
     # API information
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyDguaxTyVONqo0jMf3PyQ2f4klZvC0mhgM"
+    DEVELOPER_KEY = settings.YT_API_KEY
     # API client
     youtube = build(api_service_name, api_version, developerKey=DEVELOPER_KEY)
     return youtube
