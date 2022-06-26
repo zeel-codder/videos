@@ -73,8 +73,11 @@ python manage.py runserver
 
 ## Api Provided
 
-1. Get videos
-   url
+1.  Get videos
+
+    Method: Get
+
+    url
 
     ```bash
     videos/<int:page>/<int:per_page_items>
@@ -98,7 +101,7 @@ python manage.py runserver
         },
         "data": [
             {
-                "id": "Ids",
+                "id": "Id",
                 "title": "String-Title of video",
                 "description": "String -Description of video",
                 "video_id": "String",
@@ -110,4 +113,4 @@ python manage.py runserver
     }
     ```
 
-    ## Thank You
+## Thank You
