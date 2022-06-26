@@ -135,7 +135,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CRONJOBS = [
     (
-        "*/1 * * * *",
+        "*/5 * * * *",
         "dashboard.cron.update_videos",
         ">> " + os.path.join(BASE_DIR, "log/job.log" + " 2>&1 "),
     )

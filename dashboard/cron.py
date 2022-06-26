@@ -4,7 +4,7 @@ from .models import VideoModel
 
 
 def update_videos():
-    """Corn job function which will run after every 1 minute and do the following task
+    """Corn job function which will run after every 5 minute and do the following task
     1. get the new video data form api
     2. add new videos in modal
     3. display the total new video added in log file
@@ -14,12 +14,12 @@ def update_videos():
     if not res:
         return
 
-    videos_list = res["items"]
-    count_videos = 0
+    videos = res["items"]
+    count_of_videos = 0
 
-    for i in range(len(videos_list)):
+    for i in range(len(videos)):
 
-        video = videos_list[i]
+        video = videos[i]
         snippet = video["snippet"]
         video_id = video["id"]["videoId"]
         title = snippet["title"]
@@ -38,10 +38,10 @@ def update_videos():
                 publish_time=publish_time,
             )
             video_to_add.save()
-            count_videos += 1
+            count_of_videos += 1
         except Exception as e:
-            # if found the same video then break
+            # if video found the same pass
             # print(e)
-            break
+            pass
 
-    print(f"Added {count_videos} videos at {datetime.datetime.now()}")
+    print(f"Added {count_of_videos} videos at {datetime.datetime.now()}")
